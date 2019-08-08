@@ -27,10 +27,18 @@ class SchoolsController < ApplicationController
   
   #Get
   def edit
+    @school = School.find(params[:id])
   end
 
   #Patch/Put
   def update
+    @school = School.find(params[:id])
+
+    if @school.update(strong_params)
+      redirect_to schools_path, notice: 'successfully edited school'
+    else
+      render 'edit'
+    end
   end
 
   #Detele
