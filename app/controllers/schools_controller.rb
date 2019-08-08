@@ -2,10 +2,12 @@ class SchoolsController < ApplicationController
 
   #Get
   def index
+    @schools = School.all
   end
 
   #Get
   def show
+    @school = School.find(params[:id])
   end
   
   #Get
