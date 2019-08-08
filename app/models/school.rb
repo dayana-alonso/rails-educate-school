@@ -1,2 +1,2 @@
-class School < ApplicationRecord
+ class School < ApplicationRecord
 end
