@@ -1,4 +1,5 @@
 class SchoolsController < ApplicationController
+
   #Get
   def index
   end
@@ -14,6 +15,12 @@ class SchoolsController < ApplicationController
 
   #Post
   def create
+    @school = School.new(strong_params)
+    if @school.save
+      redirect_to schools_path, notice: 'successfully created school'
+    else
+      render 'new'
+    end
   end
   
   #Get
@@ -26,6 +33,11 @@ class SchoolsController < ApplicationController
 
   #Detele
   def destroy
+  end
+
+# PRIVATE
+  def strong_params
+    params.require(:school).permit(:name, :address, :active)
   end
 
 end
