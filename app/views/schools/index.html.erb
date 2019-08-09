@@ -5,6 +5,7 @@
       <td><%= school.name %></td>
       <td><%= link_to 'show', school_path(school) %></td>
       <td><%= link_to 'edit', edit_school_path(school) %></td>
+      <td><%= link_to 'delete', school_path(school), method: :delete %></td>
     </tr>
   <% end %>
 </table>

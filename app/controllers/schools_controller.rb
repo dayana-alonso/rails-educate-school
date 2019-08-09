@@ -43,7 +43,11 @@ class SchoolsController < ApplicationController
 
   #Detele
   def destroy
+    @school = School.find(params[:id])
+    @school.destroy
+    redirect_to schools_path, notice: 'successfully deleted school'
   end
+
 
 # PRIVATE
   def strong_params
