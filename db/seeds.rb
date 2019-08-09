@@ -13,3 +13,9 @@ School.create([
   { name: 'Clare College', address: 'Cambridge' },
   { name: 'Yale', address: 'New Haven' }
 ])
+
+Student.create([
+    { school_id: sch.id, fullname: "John Doe" },
+    { school_id: sch.id, fullname: "Queen Ramonda" },
+    { school_id: sch.id, fullname: "Jane Doe" }
+])
