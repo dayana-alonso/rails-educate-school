@@ -1,5 +1,4 @@
 class SchoolsController < ApplicationController
-
   #Get
   def index
     @schools = School.all
