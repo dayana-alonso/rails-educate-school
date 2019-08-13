@@ -18,7 +18,6 @@ class LibrariesController < ApplicationController
   	end
   end
 
-
 	def strong_params
 		params.require(:library).permit(:name, :school_id )
 	end

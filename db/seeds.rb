@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-School.create([
+schools = School.create([
   { name: 'Exeter College', address: 'Oxford' },
   { name: 'Trinity College', address: 'Oxford' },
   { name: 'Christ\'s College', address: 'Cambridge' },
@@ -14,8 +14,10 @@ School.create([
   { name: 'Yale', address: 'New Haven' }
 ])
 
+schools.each do |sch|
 Student.create([
-    { school_id: sch.id, fullname: "John Doe" },
-    { school_id: sch.id, fullname: "Queen Ramonda" },
-    { school_id: sch.id, fullname: "Jane Doe" }
+	{ school_id: sch.id, fullname: "John Doe" },
+	{ school_id: sch.id, fullname: "Queen Ramonda" },
+	{ school_id: sch.id, fullname: "Jane Doe" }
 ])
+end

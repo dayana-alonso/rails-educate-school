@@ -1,4 +1,5 @@
  class School < ApplicationRecord
- 	validates :name, :address, presence: true
  	has_one :library
+ 	has_many :students
+ 	validates :name, :address, presence: true
 end
