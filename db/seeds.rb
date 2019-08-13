@@ -16,8 +16,21 @@ schools = School.create([
 
 schools.each do |sch|
 Student.create([
-	{ school_id: sch.id, fullname: "John Doe" },
-	{ school_id: sch.id, fullname: "Queen Ramonda" },
-	{ school_id: sch.id, fullname: "Jane Doe" }
-])
+  { school_id: sch.id, fullname: "John Doe" },
+  { school_id: sch.id, fullname: "Queen Ramonda" },
+  { school_id: sch.id, fullname: "Jane Doe" }
+ ])
 end
+
+Subject.create([
+  {name: 'Science'},
+  {name: 'Music'},
+  {name: 'Programming'}
+])
+
+Student.all.each do |student|
+  Subject.all.each do |subject|
+    Study.create({student: student, subject: subject})
+ end
+end
+
